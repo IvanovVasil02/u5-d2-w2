@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Random;
 
 @Service
-public class BlogPostSevice {
+public class BlogPostsSevices {
   private List<BlogPost> blogPosts = new ArrayList<>();
 
   public BlogPost save(BlogPost body) {
