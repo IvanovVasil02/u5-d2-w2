@@ -32,7 +32,7 @@ public class BlogPostSevice {
   }
 
   public void findByIdAndDelete(int id) {
-    BlogPost blogPost = (BlogPost) blogPosts.stream().filter(blogPost1 ->blogPost1.getId() == id);
+    BlogPost blogPost = (BlogPost) blogPosts.stream().filter(blogPost1 -> blogPost1.getId() == id);
     blogPosts.remove(blogPost);
   }
 
@@ -42,8 +42,8 @@ public class BlogPostSevice {
       if (blogPost.getId() == id) {
         found = blogPost;
         found.setCategoria(body.getCategoria());
-        found.setTitolo(body.getTitolo(););
-        found.setCover(body.getCover(););
+        found.setTitolo(body.getTitolo());
+        found.setCover(body.getCover());
         found.setPostContent(body.getPostContent());
         found.setReadingTime(body.getReadingTime());
       }
