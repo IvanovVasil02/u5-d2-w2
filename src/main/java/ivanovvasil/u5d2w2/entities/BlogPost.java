@@ -1,16 +1,14 @@
 package ivanovvasil.u5d2w2.entities;
 
 import com.github.javafaker.Faker;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalTime;
 import java.util.Locale;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 @ToString
 @Builder(builderClassName = "BlogPostBuilder")
 public class BlogPost {
@@ -20,6 +18,10 @@ public class BlogPost {
   private String cover;
   private String postContent;
   private LocalTime readingTime;
+
+  public void setId(int id) {
+    this.id = id;
+  }
 
   public void setCategoria(String categoria) {
     this.categoria = categoria;
@@ -41,7 +43,7 @@ public class BlogPost {
     this.readingTime = readingTime;
   }
 
-  public static class BlogPostBuilder{
+  public static class BlogPostBuilder {
     Faker f = new Faker(Locale.ITALY);
     private String categoria = f.book().genre();
     private String titolo = f.book().title();
